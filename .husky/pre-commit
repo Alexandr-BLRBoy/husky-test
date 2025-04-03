@@ -1,0 +1,11 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Проверка и автоисправление ESLint
+npm run lint
+
+# Форматирование кода Prettier
+npm run format
+
+# Добавляем изменения от Prettier в коммит
+git add -A
